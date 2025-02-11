@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        {{ css }}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="social-icons">
+            {% for social in social_links %} 
+        <!--THIS IS THE LOOOPING CONSTUCT, YOU CAN ADD MORE SOCIAL LINKS :> -->
+            <a href="{{ social.url }}" aria-label="{{ social.platform }}">
+                <i class="fab fa-{{ social.platform }}"></i>
+            </a>
+            {% endfor %}
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            {{ content }}
+            
+            <div class="footer">
+                
+                <div class="generator_credit">
+                    {% for credit in generator_credit %}
+                        <a href="{{ credit.url }}" aria-label="{{ credit.text }}">
+                            <h5><span>{{ credit.text }}</span></h5>
+                        </a>
+                    {% endfor %}
+                </div>
+                
+            </div>
+        </div>
+    </main>
+</body>
+</html>

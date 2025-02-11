@@ -1,0 +1,121 @@
+:root {
+    --primary: #6C63FF;
+    --secondary: #e8a2ff;
+    --bg: #0a0a0a;
+    --text: #ffffff;
+    --card-bg: #161616;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.logo {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0rem;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+h2 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin: 2rem 0 1.5rem;
+}
+
+
+
+
+
+.project-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+h4 { 
+    color : var(--primary);
+    font-size: 0.8 rem;
+    margin : 0.5rem 0 0.5rem; 
+
+
+}
+
+h4 { 
+    color : var(--primary);
+    font-size: 0.3 rem;
+    margin : 0.2rem 0 0.2rem; 
+
+
+}
+
+.footer {
+    margin-top: 3rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-icons a {
+    color: var(--text);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.credit {
+    color: rgba(247, 127, 0, 0.5);
+    font-size: 0.9rem;
+}

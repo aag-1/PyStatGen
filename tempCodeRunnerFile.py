@@ -1,0 +1,1 @@
+footer_text=config['footer_text'],
