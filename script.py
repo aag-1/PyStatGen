@@ -1,6 +1,10 @@
+
+import time #this is so that we can benchmark the time required for the entired build 
 from markdown2 import markdown # converts markdown file to html 
 from jinja2 import Environment, FileSystemLoader  #inject everything into the layout.html file and create a final output html 
 from json import load  
+
+start_time = time.perf_counter()
 
 template_env = Environment(loader=FileSystemLoader(searchpath="./"))
 
@@ -46,3 +50,7 @@ with open("index.html", "w") as output_file:
             generator_credit=config['generator_credit']
         )
     )
+
+end_time = time.perf_counter()
+
+print(f"The total time taken for the build of the static site : {end_time - start_time:.6f} seconds" )
